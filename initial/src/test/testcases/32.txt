@@ -1,0 +1,2 @@
+If not(n1 = 0) Then Halt;
+                                                

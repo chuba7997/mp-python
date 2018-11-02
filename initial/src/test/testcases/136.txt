@@ -1,0 +1,11 @@
+procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
+                    VAR x,y: real;
+                    begin
+                        if (x <= 1.5) AND (x>=5.5) AND (y>9) then
+                            begin
+                                y:=y+1;
+                                print(y);
+                            end
+
+                        return;
+                    end

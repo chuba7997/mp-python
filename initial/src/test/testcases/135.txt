@@ -1,0 +1,9 @@
+procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
+                    VAR x,y: real;
+                        s: string;
+                        arr_1,arr_2: array[10 .. 100] of integer;
+                    begin
+                        a:=b*2;
+
+                        return;
+                    end

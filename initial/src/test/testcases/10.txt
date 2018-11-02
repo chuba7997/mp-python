@@ -1,0 +1,5 @@
+function max(num1, num2: Real): reaL;
+                                            begin
+                                                return 1;
+                                            end
+                                        

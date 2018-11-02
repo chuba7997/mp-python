@@ -1,0 +1,12 @@
+function foo(x,y,z:integer):integer;
+                    begin
+                        return (x+y+z);
+                    end
+                    procedure main();
+                    var a,b,c,d: integer; h,i,k:real;
+                    begin
+                        if not foo(b,c,d)<=10 and then a<>0 then
+                            print(a);
+                        else
+                            print("FAIL");
+                    end

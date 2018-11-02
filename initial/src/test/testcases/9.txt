@@ -1,0 +1,2 @@
+  for i:= a+1 downto b*10 do writeln(i);
+                                        

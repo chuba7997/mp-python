@@ -1,0 +1,5 @@
+function foo(a,b,c:integer;d,e:real;s:string): integer;
+                    var x,y,z: integer; h,i,k:real;
+                    begin
+                        return 1;
+                    end

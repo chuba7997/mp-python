@@ -1,0 +1,11 @@
+procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
+                    VAR myIntArray: array [ 1 .. 100] of integer;
+                    myBoolArray: array [ 1 .. 100] of Boolean;
+                    begin
+                        For i := 1 to Length(myIntArray) do
+                        Begin
+                            myIntArray[i] := 1;
+                            myBoolArray[i] := true;
+                        End
+                        return;
+                    end

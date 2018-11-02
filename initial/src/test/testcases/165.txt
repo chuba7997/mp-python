@@ -1,0 +1,5 @@
+procedure main();
+                    var a,b,c,d: integer;
+                    begin
+                        a:=b:=c:=d:=foo(a);                   
+                    end

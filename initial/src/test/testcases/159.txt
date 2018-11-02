@@ -1,0 +1,11 @@
+procedure foo();
+                    var stop: boolean;
+                    i: integer;
+                    begin
+                        i:=0;
+                        while do
+                        begin
+                            i:=i+1;
+                        end
+                        return;
+                    end

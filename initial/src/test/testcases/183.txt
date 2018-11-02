@@ -1,0 +1,11 @@
+function foo(x,y,z:integer):integer;
+                    begin
+                        return (x+y+z);
+                    end
+                    var a,b,c:integer;x,y:real;
+                    procedure main();
+                    var a,b,c,d: integer;
+                    begin
+                        a:=foo(b+c+d)
+                    end
+                    

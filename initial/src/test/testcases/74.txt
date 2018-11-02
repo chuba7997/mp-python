@@ -1,0 +1,1 @@
+if nota andnot borcand not dthen;

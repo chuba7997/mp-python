@@ -1,0 +1,1 @@
+s,:=,I like programming a lot,;,<EOF>

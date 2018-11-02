@@ -1,0 +1,4 @@
+function foo(a,b:integer):integer;
+                                            begin
+                                                return a+b;
+                                            end;

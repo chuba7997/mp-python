@@ -1,0 +1,16 @@
+procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
+                    VAR x,y,z: integer;
+                    result: string;
+                    begin
+                        if (x > 5) then
+                            print("OK");
+                        else
+                            if y < 1 then
+                                if(z <1)then
+                                begin
+                                    result:="fail";
+                                    print(x+y+z,"=> NOT OK");
+                                end
+
+                        return;
+                    end

@@ -1,0 +1,8 @@
+procedure foo();
+                    begin
+                        fOr i := 100 downto 1 do
+                            for j:= 1 to i do
+                                for k:= 1 to j do
+                                    print("*");
+                        return;
+                    end

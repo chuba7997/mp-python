@@ -1,0 +1,5 @@
+procedure main();
+                    var a: array [1 .. 5] of integer;
+                    begin
+                        foo()[3+x] := foo()[3+x]/2+(a[b[2+i]] +3);
+                    end

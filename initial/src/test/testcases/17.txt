@@ -1,0 +1,5 @@
+ { A block comment with //a line comment inside}
+                                            { Another 
+                                            block comment 
+                                            with //a line comment inside}
+                                        

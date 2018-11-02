@@ -1,0 +1,5 @@
+procedure main();
+                    var a: array [1 .. 5] of integer;
+                    begin
+                        foo(2)[3+x] := a[b[2]] +3;
+                    end

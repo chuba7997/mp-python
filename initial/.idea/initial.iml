@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/external" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/astgen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/checker" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/codegen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/parser" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/utils" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/mp/parser/.antlr" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/solutions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/testcases" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

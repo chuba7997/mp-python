@@ -1,0 +1,6 @@
+ procedure main();                   
+                    begin
+                        a,b,c,d: integer;
+                        foo(b+c+d);
+                    end
+                    

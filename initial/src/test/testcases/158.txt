@@ -1,0 +1,19 @@
+procedure foo();
+                    var stop: boolean;
+                    i: integer;
+                    begin
+                        i:=0;
+                        while (stop=false) do
+                        begin
+                            if (i<100) then
+                            begin
+                                print(i);
+                                writeln("&");
+                            end
+                            else
+                                stop:=true;
+
+                            i:=i+1;
+                        end
+                        return;
+                    end

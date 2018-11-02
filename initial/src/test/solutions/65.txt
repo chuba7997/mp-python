@@ -1,0 +1,1 @@
+for,i,:=,10,downto,1,do,begin,if,i,mod,2,=,1,then,continue,;,print,(,continue,),;,end,<EOF>

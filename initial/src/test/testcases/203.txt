@@ -1,0 +1,14 @@
+
+                    function goo (a:integer;b:real;c:string;d:integer) : real;
+                    begin
+                        if a=true or else b=true then return 2.3 ; //CORRECT
+                        else return 2 ; //CORRECT
+                    end
+                    
+                    procedure main ( );  
+                    var x:array [1 .. 5] of integer;   
+                        y:real;               
+                    begin
+                        y:=goo (3,a+1,m(2), x[4]) ;
+                    end
+                

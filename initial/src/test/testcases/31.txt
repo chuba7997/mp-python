@@ -1,0 +1,3 @@
+var b: boolean; 
+                                                b:=1=1;
+                                                

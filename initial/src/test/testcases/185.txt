@@ -1,0 +1,8 @@
+ procedure main();
+                    var a:string;
+                    begin
+                        a:="Nguyen Hong Hai
+
+\";
+                    end
+                    

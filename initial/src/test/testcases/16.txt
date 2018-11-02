@@ -1,0 +1,6 @@
+ (* This is traditional block comment  ; *)
+                                        a[10]:=10*c;
+                                        (* This is 
+                                        another 
+                                        traditional block comment  ; *)
+                                        

@@ -1,0 +1,6 @@
+function foo(a,b: integer; c:real):real;
+                    begin
+                        x:=y:=z:=1+2;
+                        result:=x*3.5;
+                        print(y);
+                    end

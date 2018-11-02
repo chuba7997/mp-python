@@ -1,0 +1,6 @@
+ procedure main();                   
+                    begin
+                        var a,b,c,d: integer;
+                        foo(b+c+d);
+                    end
+                    

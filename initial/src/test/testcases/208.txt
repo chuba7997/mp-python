@@ -1,0 +1,13 @@
+                                      
+                    procedure foo(a : integer);
+                    begin
+                    end
+                    function goo( a : integer): integer;
+                    begin
+                    end
+                    procedure main();
+                    begin
+                         a:=foo(2);
+                         goo(4);
+                    end
+                

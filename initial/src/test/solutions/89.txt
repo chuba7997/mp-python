@@ -1,0 +1,1 @@
+s,:=,      Principle   Of      Programming         Language    ,;,<EOF>
