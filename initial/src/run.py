@@ -13,6 +13,8 @@ ANTLR_JAR = os.environ.get('ANTLR_LIB')
 TARGET_DIR = './target'
 GENERATE_DIR = 'main/mp/parser'
 
+
+#Testing git
 def main(argv):
     if len(argv) < 1:
         printUsage()
