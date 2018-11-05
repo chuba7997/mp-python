@@ -162,7 +162,13 @@ WS : [ \t\r\n]+ -> skip ;
 //ILLEGAL_ESCAPE: '"' ~[\r\n"]* '\\' ~[bfrnt'"\\]* '"' {raise IllegalEscapeInString(self.text)};
 //ILLEGAL_ESCAPE: '"' ('\\' ~[bfrnt'"\\] | ~'\\')* '"' {raise IllegalEscapeInString(self.text)};
 
-ILLEGAL_CHAR: . {raise IllegalCharInString(self.text[1:])};
+ILLEGAL_CHAR: '"' (~[\t\\'])* [\t\\'] (~[\t\\'])* '"' {
+pos = tab = self.text.find('\t')
+sq = self.text.find('\'')
+if tab == -1:
+    pos = sq
+raise IllegalCharInString(self.text[1: pos])
+};
 
 //UNCLOSE_STRING: '"' (~'"')* EOF {raise UnclosedString(self.text)};
 //ILLEGAL_ESCAPE: '"' ~[\r\n"]* ('\\' ~[bfrnt'"\\] | ~'\\')* {raise IllegalEscapeInString(self.text[1:])};
