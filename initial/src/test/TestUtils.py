@@ -1,6 +1,9 @@
 import sys,os
 from antlr4 import *
 from antlr4.error.ErrorListener import ConsoleErrorListener,ErrorListener
+
+from ASTGeneration import ASTGeneration
+
 if not './main/mp/parser/' in sys.path:
     sys.path.append('./main/mp/parser/')
 #if os.path.isdir('../target/main/mp/parser') and not '../target/main/mp/parser/' in sys.path:
@@ -17,8 +20,8 @@ from lexerror import *
 # import subprocess
 
 JASMIN_JAR = "../external/jasmin.jar"
-TEST_DIR = "../test/testcases/"
-SOL_DIR = "../test/solutions/"
+TEST_DIR = "testcases/"
+SOL_DIR = "solutions/"
 Lexer = MPLexer
 Parser = MPParser
 
