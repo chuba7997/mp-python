@@ -1,1 +1,0 @@
-s:="My name is Hai.\n	His name's Nam.\nHer name is Su...";

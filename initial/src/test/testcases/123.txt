@@ -1,3 +1,0 @@
-function foo(a,b: integer; c:real;d: array [ 1 .. 5] of string):array [1 .. 2] of integer;
-                    begin
-                    end

@@ -1,3 +1,0 @@
-procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
-                    begin
-                    end

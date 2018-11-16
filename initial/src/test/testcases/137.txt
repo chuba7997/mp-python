@@ -1,9 +1,0 @@
-procedure foo(a,b: integer; c:real;d: array [1 .. 5] of string);
-                    VAR x,y: real;
-                    begin
-                        if (x <= 1.5) then
-                            y:=y+1;
-                            print(y);
-
-                        return;
-                    end

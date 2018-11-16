@@ -1,25 +1,21 @@
 /**
- * Student name: Nguyễn Hồng Hải
+ * Student name: Nguyen Hong Hai
  * Student ID: 1770471
  */
 grammar MP;
 
-/**
- Updated
-*/
 @lexer::header {
 from lexerror import *
 }
 
-program: decl* EOF;
-decl: vDecl | fDecl ;
+program: decl+ EOF;
+decl: vDecl | funcDecl | procDecl ;
 vDecl: VAR_KW (varList SEMICOLON)+;
 varName: ID;
 varList: varName (COMMA varName)* COLON mpType;
 mpType: (primType|compType);
 compType: ARRAY_KW LSB expr DDOT expr RSB OF_KW primType;
 primType: INTEGER_KW | REAL_KW | BOOLEAN_KW | STRING_KW;
-fDecl: funcDecl | procDecl;
 paramList: varList (SEMICOLON varList)*;
 funcDecl: FUNCTION_KW funcName LB paramList? RB COLON mpType SEMICOLON vDecl* compoundStmt;
 funcName: ID;
@@ -30,17 +26,17 @@ stmt: ifElseStmt | nonIfStmt;
 ifElseStmt: matchStmt | unMatchStmt;
 matchStmt: IF_KW expr THEN_KW (matchStmt | nonIfStmt) ELSE_KW stmt ;
 unMatchStmt: IF_KW expr THEN_KW stmt;
-nonIfStmt:  assignStmt SEMICOLON | withStmt |  forStmt | whileStmt | BREAK_KW SEMICOLON | CONTINUE_KW SEMICOLON | returnStmt SEMICOLON | callStmt SEMICOLON | compoundStmt;
+nonIfStmt:  assignStmt SEMICOLON | withStmt |  forStmt | whileStmt | BREAK_KW SEMICOLON | CONTINUE_KW SEMICOLON | returnStmt SEMICOLON | callStmt | compoundStmt;
 assignLHS: varName | expr LSB expr RSB;
 assignStmt: <assoc=right> (assignLHS ASSIGN_KW)+ expr;
-invocationExpr: ID LB fParams RB;
+invocationExpr: ID LB fParams? RB;
 forStmt: FOR_KW ID ASSIGN_KW expr (TO_KW|DOWNTO_KW) expr DO_KW stmt;
 whileStmt: WHILE_KW expr DO_KW stmt;
 withStmt: WITH_KW (varList SEMICOLON)+ DO_KW stmt;
-callStmt: ID LB fParams RB;
+callStmt: invocationExpr SEMICOLON;
 returnStmt: RETURN_KW | RETURN_KW expr ;
 dataTypeLit: INTLIT | FLOATLIT | BOOLEANLIT | STRINGLIT ;
-fParams: (expr (COMMA expr)*)?;
+fParams: expr (COMMA expr)*;
 expr: LB expr RB
     | dataTypeLit | ID | invocationExpr | expr LSB expr RSB
     | <assoc=right> (SUB_KW | NOT_KW) expr
@@ -51,7 +47,7 @@ expr: LB expr RB
     ;
 
 /* Lexical Specification */
-fragment A : [aA]; 
+fragment A : [aA];
 fragment B : [bB];
 fragment C : [cC];
 fragment D : [dD];
@@ -109,8 +105,8 @@ NOT_KW: N O T;
 MOD_KW: M O D;
 OR_KW: O R;
 AND_KW: A N D;
-ORELSE_KW: O R' 'E L S E;
-ANDTHEN_KW: A N D' 'T H E N;
+ORELSE_KW: O R ' '+ E L S E;
+ANDTHEN_KW: A N D ' '+ T H E N;
 NOTEQUAL_KW: '<>';
 EQUAL_KW: '=';
 LESSTHAN_KW: '<';
@@ -140,7 +136,7 @@ FLOATLIT: NUMBER+[.]?FRACTION* | NUMBER*[.]?FRACTION+;
 
 BOOLEANLIT: T R U E | F A L S E;
 
-STRINGLIT: '"' (~[\b\f\r\n\t'"\\] | '\\' [bfrnt'"\\])* '"' {self.text=self.text[1:-1]} ;
+STRINGLIT: '"' (~[\b\f\r\n\t'"\\] | '\\'[bfrnt'"\\])* '"' {self.text=self.text[1:-1]} ;
 
 /* Types */
 BOOLEAN_KW: B O O L E A N;
@@ -156,23 +152,24 @@ L_COMMENT: '//' ~[\r\n]* -> skip;
 /* Identifiers */
 ID: (LETTERS | '_')(LETTERS | NUMBER | '_')*;
 
-WS : [ \t\r\n]+ -> skip ;
-
-//ILLEGAL_CHAR: '"' ('\\' ~[t'] | ~'\\')* {raise IllegalCharInString(self.text)};
-//ILLEGAL_ESCAPE: '"' ~[\r\n"]* '\\' ~[bfrnt'"\\]* '"' {raise IllegalEscapeInString(self.text)};
-//ILLEGAL_ESCAPE: '"' ('\\' ~[bfrnt'"\\] | ~'\\')* '"' {raise IllegalEscapeInString(self.text)};
+WS : [ \t\f\r\n]+ -> skip ;
 
 ILLEGAL_CHAR: '"' (~[\t'])* [\t'] (~[\t'])* '"' {
 pos = tab = self.text.find('\t')
 sq = self.text.find('\'')
 if tab == -1:
     pos = sq
-raise IllegalCharInString(self.text[1: pos])
+raise IllegalCharInString(self.text[1: pos+1])
 };
 
-//UNCLOSE_STRING: '"' (~'"')* EOF {raise UnclosedString(self.text)};
-//ILLEGAL_ESCAPE: '"' ~[\r\n"]* ('\\' ~[bfrnt'"\\] | ~'\\')* {raise IllegalEscapeInString(self.text[1:])};
-ILLEGAL_ESCAPE: '"' ~[\r\n"]* '\\' ~[bfrnt'"\\]* (~'"')* '"' {raise IllegalEscapeInString(self.text[1:])};
+ILLEGAL_ESCAPE: '"' ~[\r\n"]* '\\' ~[bfrn"\\]* (~'"')*  {
+slash = self.text.find('\\')
+raise IllegalEscapeInString(self.text[1: slash +2])
+};
+
 UNCLOSE_STRING: '"' (~'"')* {raise UnclosedString(self.text[1:])};
+
 ERROR_CHAR: . {raise ErrorToken(self.text)};
+
+
 

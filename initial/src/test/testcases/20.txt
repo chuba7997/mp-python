@@ -1,2 +1,0 @@
- (* A block comment with //a line comment inside*)
-                                        

@@ -1,1 +1,0 @@
-if,a,AND THEN,b,OR ELSE,c,=,TRUE,then,;,<EOF>

@@ -1,9 +1,0 @@
-                    
-                    procedure main ( );  
-                    var x:array [1 .. 5] of integer;   
-                        y:real;               
-                    begin
-                        if x:=3 then
-                            print(x);
-                    end
-                

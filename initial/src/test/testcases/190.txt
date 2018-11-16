@@ -1,1 +1,0 @@
-var arr: array[(a+b+c)/3 .. (100 mod 11)] of integer;

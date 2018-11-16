@@ -1,3 +1,0 @@
-procedure main(); // no parameters are allowed
-                                            begin                                                
-                                            end;

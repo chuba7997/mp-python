@@ -1,7 +1,0 @@
-
-                    Procedure Main();          
-                    BEGIN
-                         writeln(a:=foo(arr[(b+c-h)/2])[3+x[5*(f/2)]-goo(foo(1)[i+j]) + 5);
-                    END
-
-                

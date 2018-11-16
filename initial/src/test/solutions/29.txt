@@ -1,1 +1,0 @@
-var,arr,:,array,[,1,Error Token .

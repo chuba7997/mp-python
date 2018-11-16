@@ -49,11 +49,6 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#fDecl.
-    def visitFDecl(self, ctx:MPParser.FDeclContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#paramList.
     def visitParamList(self, ctx:MPParser.ParamListContext):
         return self.visitChildren(ctx)

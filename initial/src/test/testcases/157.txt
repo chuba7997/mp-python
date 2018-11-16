@@ -1,9 +1,0 @@
-procedure foo();
-                    begin
-                        while true do
-                        begin
-                            print(i);
-                            writeln("&");
-                        end
-                        return;
-                    end

@@ -1,1 +1,0 @@
-while result=True do print("True");

@@ -1,1 +1,0 @@
- s:="hello, My 	name is Hai." 

@@ -1,4 +1,0 @@
- (* A block comment with //a line comment inside*) a:=b+c;
-                                            // Line comment with (*traditional block comment inside
-                                            print(a);{ block comment}                                       
-                                        

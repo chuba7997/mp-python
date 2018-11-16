@@ -1,5 +1,0 @@
-procedure main();
-                    var a: integer := 1;
-                    begin
-                        print(a);
-                    end

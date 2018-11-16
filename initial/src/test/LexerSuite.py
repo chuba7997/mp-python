@@ -442,9 +442,8 @@ class LexerSuite(unittest.TestCase):
     # def test_an_illegal_string_with_new_line_character_inside(self):
     #     self.assertTrue(TestLexer.test("""s:="My name is Hai.\nHis name's Nam.Her name is Su...";"""
     #                                    ,"""s,:=,Error Token \"""",99))
-
     def test_another_illegal_string_with_carriage_return_insde(self):
-        self.assertTrue(TestLexer.test(""" s:="hello, My \tname is Hai." """
+        self.assertTrue(TestLexer.test(""" "Khoa is \ number one"; """
                                        ,"""s,:=,Error Token \"""",100))
 
 

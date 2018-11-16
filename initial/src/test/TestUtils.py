@@ -3,6 +3,8 @@ from antlr4 import *
 from antlr4.error.ErrorListener import ConsoleErrorListener,ErrorListener
 if not './main/mp/parser/' in sys.path:
     sys.path.append('./main/mp/parser/')
+#if os.path.isdir('../target/main/mp/parser') and not '../target/main/mp/parser/' in sys.path:
+#    sys.path.append('../target/main/mp/parser/')
 if os.path.isdir(os.path.realpath('../target')) and not os.path.realpath('../target') in sys.path:
     sys.path.append(os.path.realpath('../target'))
 from MPLexer import MPLexer
@@ -14,9 +16,9 @@ from lexerror import *
 # from CodeGenerator import CodeGenerator
 # import subprocess
 
-JASMIN_JAR = "./external/jasmin.jar"
-TEST_DIR = "./test/testcases/"
-SOL_DIR = "./test/solutions/"
+JASMIN_JAR = "../external/jasmin.jar"
+TEST_DIR = "../test/testcases/"
+SOL_DIR = "../test/solutions/"
 Lexer = MPLexer
 Parser = MPParser
 
@@ -54,8 +56,7 @@ class TestLexer:
     def printLexeme(dest,lexer):
         tok = lexer.nextToken()
         if tok.type != Token.EOF:
-            # dest.write(tok.text+","+str(tok.type)+";")
-            dest.write(tok.text + ",")
+            dest.write(tok.text+",")
             TestLexer.printLexeme(dest,lexer)
         else:
             dest.write("<EOF>")
@@ -101,7 +102,7 @@ class TestParser:
             dest.write(str(e))
         finally:
             dest.close()
-"""
+
 class TestAST:
     @staticmethod
     def test(input,expect,num):
@@ -121,7 +122,7 @@ class TestAST:
         asttree = ASTGeneration().visit(tree)
         dest.write(str(asttree))
         dest.close()
-
+"""
 class TestChecker:
     @staticmethod
     def test(input,expect,num):       

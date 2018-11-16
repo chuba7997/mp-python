@@ -1,1 +1,0 @@
-if,a,>,b,+,c,and,a,<>,e,or,e,<=,f,and,j,=,k,then,;,<EOF>

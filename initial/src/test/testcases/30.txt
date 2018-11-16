@@ -1,4 +1,0 @@
-if (arr[1]<>NULL) THEN 
-                                                print(a[1]);
-                                                eLse
-                                                print(a[10];

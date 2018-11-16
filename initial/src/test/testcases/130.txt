@@ -1,6 +1,0 @@
-function foo(a,b: integer; c:;d: array [1 .. 5] of string) :array [1 .. 2] of integer;
-                    vaR x,y: real;
-                        s: string;
-                        arr_1,arr_2: array[10 .. 100] of integer;
-                    begin
-                    end
